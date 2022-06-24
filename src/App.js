@@ -4,19 +4,23 @@ import { UserForm } from './components/UsersForm/UserForm';
 import {UserList} from './components/Users/UserList';
 
 const APP_USERS = [
-  {name: 'John', age: 31},
-  {name: 'Mike', age: 27},
-  {name: 'Everret', age: 56},
-  {name: 'Quonn', age: 17}
+  {id: 'u1', name: 'John', age: 31},
+  {id: 'u2', name: 'Mike', age: 27},
+  {id: 'u3', name: 'Everret', age: 56},
+  {id: 'u4',name: 'Quonn', age: 17}
 ]
 
 const App = () => {
 
   const [userList, setUserList] = useState(APP_USERS);
 
+  const addUser = data => {
+    setUserList(prevUserList => [data, ...prevUserList])
+  }
+
   return (
     <div className={styles.App}>
-      <UserForm></UserForm>
+      <UserForm addUser={addUser}></UserForm>
       <UserList userList={userList}></UserList>
     </div>
   );
