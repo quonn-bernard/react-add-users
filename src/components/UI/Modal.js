@@ -8,7 +8,7 @@ export const Modal = props => {
     }
 
     return <div className={styles['modal-panel']}>
-                <div id="#ok">
+                <div>
                     <header className={styles['modal-panel__header']}>{props.title}</header>
                     <h2>{props.message}</h2>
                     <Button onClick={props.onModalDissmisal}>CLOSE</Button>

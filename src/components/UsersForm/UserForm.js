@@ -3,6 +3,7 @@ import { Card } from "../UI/Card";
 import styles from './UserForm.module.css';
 import { Button } from "../UI/Button";
 import { Modal } from '../UI/Modal';
+import { Wrapper } from '../Helpers/Wrapper';
 
 export const UserForm = props => {
 
@@ -46,7 +47,7 @@ export const UserForm = props => {
         setError(false);
     }
 
-    return <div>
+    return <Wrapper>
             {error && <Modal title={'Invalid Input'} message={errorMessage} onModalDissmisal={handleModalDissmisal} show={error}/> }
                 <Card>
                     <div className={styles['form-control']} >
@@ -59,6 +60,6 @@ export const UserForm = props => {
                         </form>
                     </div>
                 </Card>    
-            </div>
+            </Wrapper>
     
 }
