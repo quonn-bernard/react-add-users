@@ -1,0 +1,13 @@
+.user {
+    width: 20rem;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.user div:nth-child(2) {
+    margin-left: .5rem;
+}
