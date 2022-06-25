@@ -20,8 +20,8 @@ const App = () => {
 
   return (
     <div className={styles.App}>
-      <UserForm addUser={addUser}></UserForm>
-      <UserList userList={userList}></UserList>
+      <UserForm addUser={addUser} />
+      <UserList userList={userList} />
     </div>
   );
 }
